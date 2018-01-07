@@ -1,5 +1,17 @@
-.page-content {
-    margin: 0 auto;
-    max-width: $site-max-width;
-    padding: $space;
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  // z-index: 10;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
 }

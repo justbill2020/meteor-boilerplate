@@ -1,16 +1,8 @@
-.header {
-    background: $header-bg;
-    color: $header-color;
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    max-width: $site-max-width;
-    margin: 0 auto;
-    padding: $space;
-}
-
-.header__title {
-    margin: 0;
+.navbar-fixed-top {
+  border: 0;
 }
