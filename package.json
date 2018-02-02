@@ -4,7 +4,8 @@
   "version": "0.0.2",
   "scripts": {
     "start": "meteor run",
-    "test": "meteor test --driver-package=practicalmeteor:mocha"
+    "test": "meteor test --driver-package=practicalmeteor:mocha",
+    "setup": ".\\scripts\\setupMeteor.cmd"
   },
   "dependencies": {
     "babel-runtime": "6.18.0",
