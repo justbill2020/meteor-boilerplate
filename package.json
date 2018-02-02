@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.0.2",
   "scripts": {
-    "start": "meteor run",
+    "start": ".\\scripts\\startMeteor.cmd local",
     "test": "meteor test --driver-package=practicalmeteor:mocha",
-    "setup": ".\\scripts\\setupMeteor.cmd"
+    "setup": ".\\scripts\\setupMeteor.cmd",
+    "startRemote": ".\\scripts\\startMeteor.cmd local",
+    "startLocal": ".\\scripts\\startMeteor.cmd local"    
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.39",
