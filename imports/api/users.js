@@ -21,7 +21,7 @@ if (Meteor.isServer) {
     sendVerificationEmail: true,
     restrictCreationByEmailDomain: (email)=>{
       // return (!!email.match(/(@subdomain\.domain\.com|@domain\.com)(\n|$)/gi))
-      return true
+      return email==email
     }
   })
   Accounts.validateLoginAttempt(function(options) {
@@ -34,20 +34,20 @@ if (Meteor.isServer) {
         methodName      (String)    The name of the Meteor method being used to login.
         methodArguments (Array)     An array of the arguments passed to the login method
     */
-let {allowed, user} = options
+    let {allowed, user} = options
     // If the login has failed, just return false.
     if (!allowed) {
-        return false;
+      return false;
     }
 
     // Check the user's email is verified. If users may have multiple 
     // email addresses (or no email address) you'd need to do something
     // more complex.
     if (user.emails[0].verified === true) {
-        return true;
+      return true;
     } else {
-        throw new Meteor.Error('email-not-verified', 'You must verify your email address before you can log in');
+      throw new Meteor.Error('email-not-verified', 'You must verify your email address before you can log in');
     }
 
-});
+  });
 }

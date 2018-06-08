@@ -1,9 +1,11 @@
 {
   "name": "meteor-boilerplate",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.1.0",
   "scripts": {
     "start": ".\\scripts\\startMeteor.cmd local",
+    "eslint-test": "eslint . --ignore-path .gitignore",
+    "eslint-fix": "eslint . --ignore-path .gitignore --fix",
     "test": "meteor test --driver-package=practicalmeteor:mocha",
     "setup": ".\\scripts\\setupMeteor.cmd",
     "startRemote": ".\\scripts\\startMeteor.cmd local",

@@ -43,18 +43,18 @@ export default cy_css = [
     }
   },{
     selector: '.edgehandles-preview, .edgehandles-ghost-edge',
-      style: {
-        'line-color': 'blue',
-        'target-arrow-color': 'blue',
-        'source-arrow-color': 'blue',
-        'target-arrow-shape': 'triangle',
-        'target-arrow-fill': 'filled'
-      }
+    style: {
+      'line-color': 'blue',
+      'target-arrow-color': 'blue',
+      'source-arrow-color': 'blue',
+      'target-arrow-shape': 'triangle',
+      'target-arrow-fill': 'filled'
+    }
   },{
     selector: ':locked',
-      style:{
+    style:{
       'border-width': 2,
       'border-color': 'red'
-      }
+    }
   }
 ]

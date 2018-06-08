@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Session } from 'meteor/session'
+import { Tracker } from 'meteor/tracker'
 import { Meteor } from 'meteor/meteor'
 import { Accounts } from 'meteor/accounts-base'
 import { createContainer } from 'meteor/react-meteor-data'
@@ -15,13 +15,13 @@ export class PrivateHeader extends React.Component {
     }
   }
   componentWillMount() {
-  Tracker.autorun(() => {
-    if (Meteor.userId()) {
-      this.setState({
-        'user': Meteor.user()
-      })
-    }
-  })
+    Tracker.autorun(() => {
+      if (Meteor.userId()) {
+        this.setState({
+          'user': Meteor.user()
+        })
+      }
+    })
   }
   renderUserDropDown(){
     let user = this.state.user
@@ -36,7 +36,7 @@ export class PrivateHeader extends React.Component {
         <MenuItem eventKey={2.3}>Something else here</MenuItem>
         <MenuItem divider />
         <MenuItem onClick={()=>{
-            this.props.handleLogout()
+          this.props.handleLogout()
         }} eventKey={2.4}>Log Out</MenuItem>
       </NavDropdown>
     )
@@ -61,27 +61,27 @@ export class PrivateHeader extends React.Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-)
+    )
   }
 }
 
 PrivateHeader.propTypes = {
-    title: PropTypes.string.isRequired,
-    handleLogout: PropTypes.func.isRequired
+  title: PropTypes.string.isRequired,
+  handleLogout: PropTypes.func.isRequired
 }
 
 export default createContainer(()=>{
-    return {
-        handleLogout: () => Accounts.logout()
-    }
+  return {
+    handleLogout: () => Accounts.logout()
+  }
 }, PrivateHeader)
 
-        // <div className="header">
-        //     <div className="header__content">
-        //         <h1 className="header__title">{props.title}</h1>
-        //         <button onClick={() => props.handleLogout()}
-        //         className="button button--link-text">
-        //             LogOut
-        //         </button>
-        //     </div>
-        // </div>
+// <div className="header">
+//     <div className="header__content">
+//         <h1 className="header__title">{props.title}</h1>
+//         <button onClick={() => props.handleLogout()}
+//         className="button button--link-text">
+//             LogOut
+//         </button>
+//     </div>
+// </div>

@@ -5,41 +5,41 @@ import expect from 'expect'
 
 if (Meteor.isServer){
     
-    describe('api_being_tested', function(){
+  describe('api_being_tested', function(){
     
-        // beforeEach(function(){
+    // beforeEach(function(){
         
-        // })
+    // })
 
-        // afterEach(function(){
+    // afterEach(function(){
 
-        // })
+    // })
 
-        describe('insert', function(){
+    describe('insert', function(){
 
-
-
-        })
-
-        describe('remove',function(){
-
-
-
-        })
-
-        describe('update',function(){
-            
-
-        })
-
-        describe('publications', function() {
-
-
-
-        })
 
 
     })
+
+    describe('remove',function(){
+
+
+
+    })
+
+    describe('update',function(){
+            
+
+    })
+
+    describe('publications', function() {
+
+
+
+    })
+
+
+  })
 
 
 }

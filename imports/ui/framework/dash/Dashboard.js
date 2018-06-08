@@ -8,7 +8,7 @@ export default () => {
     <div>
       <PrivateHeader title="Dashboard"/>
       <Row>
-        <Col mdOffset={3} sm={9} mdOffset={2} md={10}>
+        <Col smOffset={3} sm={9} mdOffset={2} md={10}>
           <p>Dashboard Content</p>
         </Col>
       </Row>
