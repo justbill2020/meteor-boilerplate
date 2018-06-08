@@ -11,7 +11,7 @@ if (Meteor.isClient) {
 
     describe('Rendered Component', function(){
 
-      it('should show\hide error messages', function (){
+      it('should show/hide error messages', function (){
         const error = 'This is not working'
         const wrapper = mount(<Login loginWithPassword={()=>{}}/>)
 

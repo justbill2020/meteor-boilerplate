@@ -1,4 +1,4 @@
-export default cy_css = [
+export const cy_css = [ //eslint disable-line
   {
     selector: 'node',
     style: {
@@ -58,3 +58,5 @@ export default cy_css = [
     }
   }
 ]
+
+export default cy_css

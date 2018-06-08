@@ -1,5 +1,5 @@
 import {Meteor} from 'meteor/meteor'
-import expect from 'expect'
+// import expect from 'expect'
 
 // import {Notes} from './notes'
 
