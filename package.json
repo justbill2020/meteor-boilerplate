@@ -7,16 +7,14 @@
     "test": "meteor test --driver-package=practicalmeteor:mocha",
     "setup": ".\\scripts\\setupMeteor.cmd",
     "startRemote": ".\\scripts\\startMeteor.cmd local",
-    "startLocal": ".\\scripts\\startMeteor.cmd local"    
+    "startLocal": ".\\scripts\\startMeteor.cmd local"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.39",
+    "@babel/runtime": "^7.0.0-beta.49",
     "babel-runtime": "6.18.0",
     "bcrypt": "^1.0.3",
-    "eslint": "^4.10.0",
-    "eslint-plugin-react": "^7.4.0",
     "g": "^2.0.1",
-    "meteor-node-stubs": "~0.2.0",
+    "meteor-node-stubs": "^0.4.1",
     "moment": "^2.17.1",
     "react": "^15.5.4",
     "react-addons-pure-render-mixin": "^15.6.2",
@@ -26,13 +24,16 @@
     "react-fontawesome": "^1.6.1",
     "react-modal": "^2.2.1",
     "react-router": "^3.0.0",
-    "simpl-schema": "0.0.3"
+    "simpl-schema": "^1.5.0"
   },
   "engines": {
     "node": "v8.9.3"
   },
   "devDependencies": {
     "enzyme": "^2.7.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-react": "^7.4.0",
     "expect": "^1.20.2",
     "react-addons-test-utils": "^15.4.1"
   }
