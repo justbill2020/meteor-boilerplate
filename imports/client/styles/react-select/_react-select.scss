@@ -267,9 +267,10 @@
   margin-top: -1px;
   max-height: 200px;
   position: absolute;
+  overflow-x: auto;
   top: 100%;
   width: 100%;
-  z-index: 10000 !important;
+  z-index: 10000000000000 !important;
   -webkit-overflow-scrolling: touch;
 }
 

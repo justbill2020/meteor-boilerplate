@@ -1,0 +1,9 @@
+@ECHO off
+set NODE_ENV=["Development"||"Production"]
+ECHO Currently in Development Mode
+set MONGO_URL=
+ECHO MONGO_URL cleared.
+set MAIL_URL=[smtps||smtp]://[USER]:[PASSWORD]@[SMTP_URL]:[PORT]
+ECHO MAIL_URL set.
+set INVITE_ONLY=[FALSE||TRUE]
+ECHO INVITE_ONLY set.

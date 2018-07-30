@@ -1,0 +1,4 @@
+@ECHO off
+CALL vars.local.cmd>CON
+set MONGO_URL=mongodb://[USER]:[PASSWORD]@[SMTP_URL]:[PORT]/[DB_ROOT]
+ECHO MONGO_URL Set to Remote URL.

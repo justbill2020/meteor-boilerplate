@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom'
 import { Session } from 'meteor/session'
 import { Tracker } from 'meteor/tracker'
 
-import {routes, onAuthChange} from '/imports/routes/routes'
-import '/imports/startup/simple-schema-configuration.js'
+import {routes, onAuthChange} from '/imports/client/routes/routes'
+import '/imports/startup/simple-schema-configuration'
+import '/imports/db/links'
+import '/imports/db/linksInversed'
+import { httpsRedirect } from '/imports/api/https-redirect'
 
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId()
@@ -13,5 +16,6 @@ Tracker.autorun(() => {
 })
 
 Meteor.startup(() => {
+  httpsRedirect()
   ReactDOM.render(routes, document.getElementById('app'))
 })
