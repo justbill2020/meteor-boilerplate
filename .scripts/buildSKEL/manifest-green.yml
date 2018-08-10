@@ -1,0 +1,11 @@
+---
+applications:
+- name: MES-InstallAssistant-Green
+  memory: 2048M
+  disk_quota: 2048M
+  file_descriptors: 999999
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+  - MES-InstallAssistant-mongo
+  - MES-InstallAssistant-proxy
+  - MES-InstallAssistant-autoScaler

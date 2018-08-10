@@ -1,6 +1,7 @@
 .item {
     background: $item-bg;
     border: 1px solid $item-border;
+    border-radius: 5px;
     margin-bottom: $space;
     padding: $space;
 }
@@ -14,4 +15,17 @@
     font-style: italic;
     text-align: center;
     margin: 0;
+}
+
+.item__center {
+  text-align: center
+}
+
+.item__label {
+  line-height: 2;
+}
+
+.item__label label {
+  text-align:center;
+  vertical-align:middle; 
 }

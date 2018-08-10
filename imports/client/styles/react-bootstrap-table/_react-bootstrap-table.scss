@@ -1,0 +1,298 @@
+/*editor error animate*/
+/*@import "~toastr/build/toastr.min.css";*/
+
+.react-bs-table-container .react-bs-table-search-form {
+  margin-bottom: 0;
+}
+
+.menu-fix {
+  overflow: inherit !important;
+  z-index: 9999;
+}
+.react-bs-table-bordered {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.react-bs-table table {
+  margin-bottom: 0;
+  table-layout: fixed;
+  td, th {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+  }
+}
+
+.react-bs-table-pagination {
+  margin-top: 10px;
+}
+
+.react-bs-table-tool-bar {
+  margin-bottom: 5px;
+}
+
+.react-bs-container-header {
+  overflow: hidden;
+  width: 100%;
+}
+
+.react-bs-container-body {
+  /*height: 154px;*/
+  overflow: inherit !important;
+  width: 100%;
+}
+
+.react-bootstrap-table-page-btns-ul {
+  float: right;
+  /* override the margin-top defined in .pagination class in bootstrap. */
+  margin-top: 0;
+}
+
+.react-bs-table {
+  .table-bordered {
+    border: 0;
+    outline: none !important;
+    > {
+      thead > tr > {
+        th, td {
+          border-bottom-width: 2px;
+        }
+      }
+      tbody > tr > td {
+        outline: none !important;
+        &.default-focus-cell {
+          outline: 3px solid cornflowerblue !important;
+          outline-offset: -1px;
+        }
+      }
+      tfoot > tr > {
+        th, td {
+          border-top-width: 2px;
+        }
+        th, td {
+          border-bottom-width: 0;
+        }
+      }
+      thead > tr > th:first-child, tbody > tr > th:first-child, tfoot > tr > th:first-child, thead > tr > td:first-child, tbody > tr > td:first-child, tfoot > tr > td:first-child {
+        border-left-width: 0;
+      }
+      thead > tr > th:last-child, tbody > tr > th:last-child, tfoot > tr > th:last-child, thead > tr > td:last-child, tbody > tr > td:last-child, tfoot > tr > td:last-child {
+        border-right-width: 0;
+      }
+      thead > tr:first-child > {
+        th, td {
+          border-top-width: 0;
+        }
+      }
+      tfoot > tr:last-child > {
+        th, td {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+  .react-bs-container-header {
+    > table > thead > tr > th {
+      vertical-align: middle;
+      .filter {
+        font-weight: normal;
+      }
+      .select-filter {
+        option[value=''], &.placeholder-selected {
+          color: lightgrey;
+          font-style: italic;
+        }
+      }
+      .filter::-webkit-input-placeholder, .number-filter-input::-webkit-input-placeholder {
+        color: lightgrey;
+        font-style: italic;
+      }
+      .select-filter.placeholder-selected option:not([value='']) {
+        color: initial;
+        font-style: initial;
+      }
+      .number-filter, .date-filter {
+        display: flex;
+      }
+      .number-filter-input, .date-filter-input {
+        margin-left: 5px;
+        float: left;
+        width: calc(100% - 67px - 5px);
+      }
+      .number-filter-comparator, .date-filter-comparator {
+        width: 67px;
+        float: left;
+      }
+    }
+    .sort-column {
+      cursor: pointer;
+    }
+  }
+}
+
+/*Esquerda*/
+
+/*Direita*/
+
+/*Topo*/
+
+/*Baixo*/
+
+/*inline editor default style*/
+
+.react-bs-container {
+  .form-control.editor {
+    /*width:100%;
+    top:0;
+    left:0;*/
+    /*height: 100%;
+    position: absolute;*/
+  }
+  .textarea-save-btn {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: -21px;
+  }
+}
+
+.react-bs-table-no-data {
+  text-align: center;
+}
+
+.ReactModal__Overlay {
+  -webkit-perspective: 600;
+  perspective: 600;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transition: opacity 150ms ease-out;
+}
+
+.ReactModal__Content {
+  -webkit-transform: scale(0.5) rotateX(-30deg);
+  transform: scale(0.5) rotateX(-30deg);
+}
+
+.ReactModal__Content--after-open {
+  -webkit-transform: scale(1) rotateX(0deg);
+  transform: scale(1) rotateX(0deg);
+  transition: all 150ms ease-in;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+  -webkit-transform: scale(0.5) rotateX(30deg);
+  transform: scale(0.5) rotateX(30deg);
+  transition: all 150ms ease-in;
+}
+
+.ReactModal__Content.modal-dialog {
+  top: $header-padding-top;
+  border: none;
+  background-color: transparent;
+}
+
+/*error tip style*/
+
+.animated {
+  animation-fill-mode: both;
+  &.bounceIn, &.bounceOut {
+    animation-duration: .75s;
+  }
+  &.shake {
+    animation-duration: .3s;
+  }
+}
+
+td.react-bs-table-expand-cell {
+  cursor: pointer;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,  50%,  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  30%, 70% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+
+.shake {
+  animation-name: shake;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+
+.bounceOut {
+  animation-name: bounceOut;
+}

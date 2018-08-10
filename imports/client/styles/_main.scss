@@ -1,8 +1,13 @@
-@import './variables';
+@import './base-variables';
 @import './base';
+@import './bs/bootstrap';
+@import './variables';
 @import './components/boxed-view';
 @import './components/button';
 @import './components/header';
+@import './components/sidebar';
 @import './components/page-content';
 @import './components/checkbox';
 @import './components/item';
+@import './react-bootstrap-table/react-bootstrap-table';
+@import './react-select/react-select';

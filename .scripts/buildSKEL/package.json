@@ -1,0 +1,14 @@
+{
+	"name": "install-assistant",
+	"private": true,
+	"scripts": {
+		"start": "node ./bundle/main.js",
+		"postinstall": "tar -xf install-assistant.tar.gz && (cd bundle/programs/server && npm install)"
+	},
+	"engines": {
+	  "node": "8.11.3"
+	},
+	"dependencies": {
+	  "cfenv": "^1.0.4"
+}
+}
