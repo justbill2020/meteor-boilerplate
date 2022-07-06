@@ -28,7 +28,7 @@
     "json-bigint": "^0.3.0",
     "lodash": "^4.17.19",
     "meteor-node-stubs": "^0.4.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-bootstrap": "^0.31.2",
     "react-bootstrap-table": "^4.3.1",
